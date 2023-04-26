@@ -32,8 +32,10 @@ h1 {
 }
 
 .container {
-  padding: 5px;
+  padding: 0;
+  margin: 60px;
   margin-top: 5px;
+  margin-right: ;
 }
 .row {
   margin: 0 auto;
