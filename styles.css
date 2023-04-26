@@ -54,6 +54,9 @@ h1 {
   padding: 20px;
   font-size: 15px;
 }
+h1 {
+  color: #ace0f9;
+}
 p {
   font-size: 95px;
   margin: 0 0 -17px 0;
