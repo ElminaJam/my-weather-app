@@ -65,7 +65,6 @@ small {
   margin: auto;
   text-align: center;
   margin-top: 30px;
-  text-transform: lowercase;
   font-family: "Courier New", Courier, monospace;
 }
 .units {
