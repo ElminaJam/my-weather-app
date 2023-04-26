@@ -60,7 +60,11 @@ p {
   margin: 0 0 -17px 0;
   padding: 0;
 }
-
+small {
+  display: block;
+  margin: auto;
+  text-transform: lowercase;
+}
 .units {
   position: relative;
   bottom: 59px;
