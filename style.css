@@ -1,0 +1,96 @@
+body {
+  margin: 10px;
+  font-family: "Cinzel", serif;
+  font-weight: 400;
+}
+
+input[type="text"] {
+  width: 50%;
+  border: 2px solid #ccc;
+  border-radius: 50px;
+  font-size: 15px;
+  text-align: center;
+  background-color: white;
+  background-repeat: no-repeat;
+  padding: 5px 5px 5px 15px;
+  transition: width 0.4s ease-in-out;
+  word-spacing: 2px;
+  margin-left: 3px;
+}
+
+input[type="text"]:focus {
+  width: 60%;
+}
+form {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px 0 0 0;
+}
+
+.container {
+  margin: auto;
+}
+.row {
+  margin: 0 auto;
+}
+.input-icon i {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 15px;
+  color: #ccc;
+}
+
+.main {
+  text-align: right;
+  font-size: 15px;
+  margin: -15px 2px 5px 10px;
+}
+.second {
+  text-align: left;
+  padding: 20px;
+  font-size: 15px;
+}
+p {
+  font-size: 95px;
+  margin: 0 0 -17px 0;
+  padding: 0;
+}
+
+.units {
+  position: relative;
+  bottom: 59px;
+  left: 52px;
+  display: block;
+}
+.temperature {
+  font-weight: 700;
+  font-size: 40px;
+  padding: 0 10px 8px 0px;
+}
+header {
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+
+.card-text {
+  font-size: 20px;
+  text-align: center;
+}
+.card-deck {
+  margin-top: 15px;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 10px 10px hsl(18, 100%, 96%);
+  background-color: hsl(204, 63%, 92%);
+  margin: 5px;
+}
