@@ -60,12 +60,13 @@ p {
   margin: 0 0 -17px 0;
   padding: 0;
 }
-.coder {
+small {
   display: block;
   margin: auto;
   text-align: center;
   margin-top: 30px;
   text-transform: lowercase;
+  font-family: "Courier New", Courier, monospace;
 }
 .units {
   position: relative;
