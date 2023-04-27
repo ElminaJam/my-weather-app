@@ -38,12 +38,21 @@ h1 {
 }
 .row {
   margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
 }
 .input-icon i {
   position: absolute;
   margin-top: 10px;
   margin-left: 15px;
   color: #ccc;
+}
+.col-8 {
+  padding: 0;
+}
+.col-3 {
+  padding: 0;
+  text-align: left;
 }
 
 .main {
