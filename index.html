@@ -26,90 +26,92 @@
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col-8">
-          <form class="search-form" id="search-form">
-            <div class="input-icon">
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <input
-                type="text"
-                autocomplete="off"
-                placeholder="search city"
-                class="search-form shadow-sm"
-                id="city-input"
-              />
-            </div>
-          </form>
-        </div>
-        <div class="col-3">
-          <button class="btn btn-success" id="current-location-button">
-            Current
-          </button>
-        </div>
-      </div>
-      <header>
-        <h1 id="city"></h1>
+      <div class="clearfix">
         <div class="row">
-          <div class="col main">
-            <p>🌤️</p>
-            <div class="day">Monday 15:00</div>
-            <span id="description"></span>
+          <div class="col-8">
+            <form class="search-form" id="search-form">
+              <div class="input-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input
+                  type="text"
+                  autocomplete="off"
+                  placeholder="search city"
+                  class="search-form shadow-sm"
+                  id="city-input"
+                />
+              </div>
+            </form>
           </div>
-          <div class="col second">
-            <footer class="temperature" id="temperature"></footer>
-            <span class="units">
-              <a href="#" id="celsius-link">°C</a> |
-              <a href="#" id="fahrenheit-link">°F </a>
-            </span>
-            Precipitation: 1% <br />Humidity: <span id="humidity"></span> %
-            <br />Wind: <span id="wind"></span> km/h
-          </div>
-        </div>
-      </header>
-      <div class="card-deck">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Tue</h5>
-            <p class="card-text">
-              🌥️ <br />
-              <strong>21°</strong> 11°
-            </p>
+          <div class="col-5">
+            <button class="btn btn-success" id="current-location-button">
+              current location
+            </button>
           </div>
         </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Wed</h5>
-            <p class="card-text">
-              🌧️ <br />
-              <strong>16°</strong> 9°
-            </p>
+        <header>
+          <h1 id="city"></h1>
+          <div class="row">
+            <div class="col main">
+              <p>🌤️</p>
+              <div class="day">Monday 15:00</div>
+              <span id="description"></span>
+            </div>
+            <div class="col second">
+              <footer class="temperature" id="temperature"></footer>
+              <span class="units">
+                <a href="#" id="celsius-link">°C</a> |
+                <a href="#" id="fahrenheit-link">°F </a>
+              </span>
+              Precipitation: 1% <br />Humidity: <span id="humidity"></span> %
+              <br />Wind: <span id="wind"></span> km/h
+            </div>
           </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Thu</h5>
-            <p class="card-text">
-              ☀️ <br />
-              <strong>16°</strong> 4°
-            </p>
+        </header>
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Tue</h5>
+              <p class="card-text">
+                🌥️ <br />
+                <strong>21°</strong> 11°
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Fri</h5>
-            <p class="card-text">
-              ☀️ <br />
-              <strong>17°</strong> 5°
-            </p>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Wed</h5>
+              <p class="card-text">
+                🌧️ <br />
+                <strong>16°</strong> 9°
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Sat</h5>
-            <p class="card-text">
-              🌧️ <br />
-              <strong>18°</strong> 9°
-            </p>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Thu</h5>
+              <p class="card-text">
+                ☀️ <br />
+                <strong>16°</strong> 4°
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Fri</h5>
+              <p class="card-text">
+                ☀️ <br />
+                <strong>17°</strong> 5°
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Sat</h5>
+              <p class="card-text">
+                🌧️ <br />
+                <strong>18°</strong> 9°
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -125,11 +127,7 @@
           >GitHub</a
         >
         and hosted on
-        <a
-          href="https://app.netlify.com/sites/elmina-jam-02/overview"
-          target="_blank"
-          >Netlify</a
-        >
+        <a href="https://elmina-jam-02.netlify.app" target="_blank">Netlify</a>
       </small>
     </div>
     <script src="script.js"></script>
