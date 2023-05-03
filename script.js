@@ -27,6 +27,7 @@ function showWeather(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.temperature.current
   );
+  celsiusTemperature = response.data.temperature.current;
 
   document.querySelector("#feelslike").innerHTML = Math.round(
     response.data.temperature.feels_like
@@ -68,18 +69,29 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
+let currentLocationButton = document.querySelector("#current-location-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);
+
 //Celsius Fahrenheit
 function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 68;
+
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 function convertToCelsius(event) {
   event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let fahrenheitTemperature = celsiusTemperature;
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 20;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
+
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
@@ -88,8 +100,5 @@ celsiusLink.addEventListener("click", convertToCelsius);
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", submit);
-
-let currentLocationButton = document.querySelector("#current-location-button");
-currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("Rome");
