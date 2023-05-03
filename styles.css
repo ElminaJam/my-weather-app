@@ -6,6 +6,7 @@ body {
   max-width: 100%;
   min-width: 600px;
   box-sizing: border-box;
+  text-transform: lowercase;
 }
 
 .clearfix {
@@ -13,8 +14,11 @@ body {
   clear: both;
   display: table;
   border: 1px solid #ccc;
+  border-radius: 20px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   padding: 20px;
+  max-width: 600px;
+  margin: 30px auto;
 }
 
 input[type="text"] {
@@ -63,17 +67,17 @@ h1 {
 .main {
   text-align: right;
   font-size: 15px;
-  margin: -15px 2px 5px 10px;
+  margin: 0 15px 0 0;
+  padding: 0 15px 0 0;
 }
 .second {
   text-align: left;
-  padding: 20px;
+  padding: 0 auto;
   font-size: 15px;
 }
 p {
-  font-size: 95px;
-  margin: 0 0 -17px 0;
-  padding: 0;
+  margin: 0 auto;
+  padding: 0 auto;
 }
 small {
   display: block;
@@ -84,14 +88,14 @@ small {
 
 .units {
   position: relative;
-  bottom: 59px;
-  left: 52px;
+  bottom: 52px;
+  left: 60px;
   display: block;
 }
 .temperature {
   font-weight: 700;
   font-size: 40px;
-  padding: 0 10px 8px 0px;
+  padding: 15px 0 0 0;
 }
 header {
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
@@ -120,10 +124,4 @@ header {
   float: left;
   width: 100%;
   padding: 0;
-}
-.container {
-  padding: 0;
-  margin-top: 15px;
-  width: 60%;
-  margin: auto;
 }
