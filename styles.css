@@ -131,3 +131,11 @@ header {
 .search-icon:focus {
   outline: none;
 }
+.active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
+  color: rgb(33, 33, 33);
+}
