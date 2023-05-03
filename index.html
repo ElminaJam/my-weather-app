@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather app</title>
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script
       src="https://kit.fontawesome.com/3fda5d8325.js"
       crossorigin="anonymous"
@@ -52,9 +52,11 @@
           <h1 id="city"></h1>
           <div class="row">
             <div class="col main">
-              <p>🌤️</p>
-              <div class="day">Monday 15:00</div>
+              <p>
+                <img src="" alt="" id="icon" class="img1" />
+              </p>
               <span id="description"></span>
+              <div class="day">Monday 15:00</div>
             </div>
             <div class="col second">
               <footer class="temperature" id="temperature"></footer>
@@ -62,8 +64,9 @@
                 <a href="#" id="celsius-link">°C</a> |
                 <a href="#" id="fahrenheit-link">°F </a>
               </span>
-              Precipitation: 1% <br />Humidity: <span id="humidity"></span> %
-              <br />Wind: <span id="wind"></span> km/h
+              Feels like: <span id="feelslike"></span>°C<br />Humidity:
+              <span id="humidity"></span>% <br />Wind:
+              <span id="wind"></span> km/h
             </div>
           </div>
         </header>
@@ -114,23 +117,23 @@
             </div>
           </div>
         </div>
+        <small>
+          Coded by 👩🏻‍💻
+          <a
+            href="https://www.linkedin.com/in/elmina-jamal-7a87071a1/"
+            target="_blank"
+            >Elmina</a
+          >
+          and is open-sourced on
+          <a href="https://github.com/ElminaJam/weather-app.git" target="_blank"
+            >GitHub</a
+          >
+          and hosted on
+          <a href="https://elmina-weather-app.netlify.app/" target="_blank"
+            >Netlify</a
+          >
+        </small>
       </div>
-      <small>
-        Coded by 👩🏻‍💻
-        <a
-          href="https://www.linkedin.com/in/elmina-jamal-7a87071a1/"
-          target="_blank"
-          >Elmina</a
-        >
-        and is open-sourced on
-        <a href="https://github.com/ElminaJam/weather-app.git" target="_blank"
-          >GitHub</a
-        >
-        and hosted on
-        <a href="https://elmina-weather-app.netlify.app/" target="_blank"
-          >Netlify</a
-        >
-      </small>
     </div>
     <script src="script.js"></script>
   </body>
