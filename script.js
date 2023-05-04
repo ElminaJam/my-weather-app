@@ -21,6 +21,50 @@ let days = [
 let day = days[now.getDay()];
 div.innerHTML = `${day} ${hours}:${minutes}`;
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col-2">
+              <div class="weather-forecast-date">${formatDay(
+                forecastDay.time
+              )}</div><img src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+          forecastDay.condition.icon
+        }.png" alt="" width="42"/>
+              <div class="weather-forecast-temperature">
+                <span class="weather-forecast-temperature-max">${Math.round(
+                  forecastDay.temperature.maximum
+                )}°</span>
+                <span class="weather-forecast-temperature-min">${Math.round(
+                  forecastDay.temperature.minimum
+                )}°</span>
+              </div>
+            </div>`;
+    }
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=231802987t6b86727b0cd8a49eao449f&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 // Search city
 function showWeather(response) {
   document.querySelector("#city").innerHTML = response.data.city;
@@ -46,6 +90,8 @@ function showWeather(response) {
     `https://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
   iconElement.setAttribute("alt", response.data.condition.description);
+
+  getForecast(response.data.coordinates);
 }
 
 function searchCity(city) {
@@ -102,3 +148,5 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", submit);
 
 searchCity("Rome");
+
+//https://api.shecodes.io/weather/v1/forecast?query=${city}&lon=${position.coords.longitude}&lat=${position.coords.latitude}&key=231802987t6b86727b0cd8a49eao449f&units=metric
