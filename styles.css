@@ -49,7 +49,6 @@ h1 {
   display: flex;
   flex-wrap: nowrap;
 }
-
 .col-8 {
   max-width: 60%;
 }
@@ -70,10 +69,7 @@ h1 {
   padding: 0 auto;
   font-size: 15px;
 }
-p {
-  margin: 0 auto;
-  padding: 0 auto;
-}
+
 small {
   display: block;
   margin: auto;
@@ -97,30 +93,6 @@ header {
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }
 
-.card-text {
-  font-size: 15px;
-  text-align: center;
-}
-.card-deck {
-  margin-top: 15px;
-  display: flex;
-}
-
-.card-title {
-  text-align: center;
-  font-size: 15px;
-}
-
-.card {
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  box-shadow: 10px 10px hsl(18, 100%, 96%);
-  background-color: hsl(204, 63%, 92%);
-  margin: 5px;
-  float: left;
-  width: 100%;
-  padding: 0;
-}
 .search-icon {
   border: none;
   background: none;
@@ -139,4 +111,21 @@ header {
 .active:hover {
   text-decoration: none;
   color: rgb(33, 33, 33);
+}
+a:hover {
+  text-decoration: none;
+}
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: #000;
+}
+.weather-forecast-date {
+  font-size: 15px;
+}
+.weather-forecast-temperature-min {
+  opacity: 0.6;
+}
+.weather-forecast-temperature {
+  font-size: 13px;
 }
