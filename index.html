@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Indie+Flower&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -27,69 +27,78 @@
   <body>
     <div class="container">
       <div class="clearfix">
-        <div class="row">
-          <div class="col-8">
-            <form class="search-form" id="search-form">
-              <div class="input-icon">
-                <button class="search-icon">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-                <input
-                  type="text"
-                  autocomplete="off"
-                  placeholder="search city"
-                  class="search-form shadow-sm"
-                  id="city-input"
-                />
-              </div>
-            </form>
-          </div>
-          <div class="col-5">
-            <button class="btn btn-success" id="current-location-button">
-              current location
-            </button>
-          </div>
-        </div>
-        <header>
-          <h1 id="city"></h1>
+        <div class="background-image-container" id="background-image-container">
           <div class="row">
-            <div class="col main">
-              <div>
-                <img src="" alt="" id="icon" class="img1" />
-              </div>
-              <span id="description"></span>
-              <div class="day">Monday 15:00</div>
+            <div class="col-8">
+              <form class="search-form" id="search-form">
+                <div class="input-icon">
+                  <button class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                  <input
+                    type="text"
+                    autocomplete="off"
+                    placeholder="search city"
+                    class="search-form shadow-sm"
+                    id="city-input"
+                  />
+                </div>
+              </form>
             </div>
-            <div class="col second">
-              <footer class="temperature" id="temperature"></footer>
-              <span class="units">
-                <a href="#" id="celsius-link" class="active">°C</a>
-                |
-                <a href="#" id="fahrenheit-link">°F </a>
-              </span>
-              Feels like: <span id="feelslike"></span>°C<br />Humidity:
-              <span id="humidity"></span>% <br />Wind:
-              <span id="wind"></span> km/h
+            <div class="col-5">
+              <button class="location-button" id="current-location-button">
+                <i class="fa-solid fa-location-dot"></i>
+                Current location
+              </button>
             </div>
           </div>
-        </header>
-        <div class="weather-forecast" id="forecast"></div>
-        <small>
-          Coded by 👩🏻‍💻
-          <a
-            href="https://www.linkedin.com/in/elmina-jamal-7a87071a1/"
-            target="_blank"
-            >Elmina</a
-          >
-          and is open-sourced on
-          <a href="https://github.com/ElminaJam/weather-app.git" target="_blank"
-            >GitHub</a
-          >
-          and hosted on
-          <a href="https://elmina-weather-app.netlify.app/" target="_blank"
-            >Netlify</a
-          >
-        </small>
+          <header>
+            <h1 id="city"></h1>
+            <div class="row">
+              <div class="col main">
+                <div class="icon">
+                  <img src="" alt="" id="icon" />
+                </div>
+                <span id="description"></span>
+                <div class="day"></div>
+              </div>
+              <div class="col second">
+                <div class="float-left">
+                  <strong class="temperature" id="temperature"></strong>
+                  <span class="units"> °C </span>
+                  <div class="weather-info">
+                    Feels like: <span id="feelslike"></span>°C<br />Humidity:
+                    <span id="humidity"></span>% <br />Wind:
+                    <span id="wind"></span> km/h
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div
+            class="weather-forecast"
+            id="forecast"
+            style="color: #261e01"
+          ></div>
+          <small>
+            Coded by 👩🏻‍💻
+            <a
+              href="https://www.linkedin.com/in/elmina-jamal-7a87071a1/"
+              target="_blank"
+              >Elmina</a
+            >
+            & is open-sourced on
+            <a
+              href="https://github.com/ElminaJam/weather-app.git"
+              target="_blank"
+              >GitHub</a
+            >
+            & hosted on
+            <a href="https://elmina-weather-app.netlify.app/" target="_blank"
+              >Netlify</a
+            >
+          </small>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>
