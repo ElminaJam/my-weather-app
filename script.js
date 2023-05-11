@@ -118,35 +118,28 @@ function getCurrentLocation(event) {
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-//Celsius Fahrenheit
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function convertToCelsius(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let fahrenheitTemperature = celsiusTemperature;
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", submit);
 
 searchCity("Rome");
 
-//https://api.shecodes.io/weather/v1/forecast?query=${city}&lon=${position.coords.longitude}&lat=${position.coords.latitude}&key=231802987t6b86727b0cd8a49eao449f&units=metric
+//Change background image
+let hour = new Date().getHours();
+const backgroundImageContainer = document.querySelector(
+  "#background-image-container"
+);
+if (hour > 17 && hour < 21) {
+  backgroundImageContainer.style.backgroundImage = `url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/081/044/original/dusk.jpg?1683561814")`;
+} else if (hour > 20 || hour < 5) {
+  backgroundImageContainer.style.backgroundImage = `url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/081/045/original/night-sky.jpg?1683561828")`;
+}
+//Change text color
+let time = new Date().getHours();
+body = document.querySelector("body");
+id = document.querySelector("#forecast");
+if (time > 20 || time < 5) {
+  id.style.color = "#fff195";
+  id.style.textShadow = "#000 0px 0px 5px";
+  body.style.color = "#fff195";
+  body.style.textShadow = "#000 0px 0px 5px";
+}
